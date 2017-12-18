@@ -1,7 +1,6 @@
 package com.achain.job;
 
 import com.achain.conf.Config;
-import com.achain.domain.dto.TransactionDTO;
 import com.achain.domain.entity.ActBlock;
 import com.achain.domain.enums.TaskDealStatus;
 import com.achain.service.IActBlockMapperService;
@@ -82,20 +81,6 @@ public class TransactionJob {
             act.setStatus(TaskDealStatus.TASK_TRX_CREATE.getIntKey());
             return act;
         }
-    }
-
-    /**
-     * 扫块数据入库
-     *
-     * @param transactionDTO 数据
-     */
-    private void saveTransaction(TransactionDTO transactionDTO) {
-//        BlockchainRecord blockchainRecord = new BlockchainRecord();
-//        blockchainRecord.setTrxId(transactionDTO.getTrxId());
-//        blockchainRecord.setTrxTime(transactionDTO.getTrxTime());
-//        blockchainRecord.setContractId(transactionDTO.getContractId());
-//        blockchainRecord.setBlockNum(transactionDTO.getBlockNum());
-//        blockchainRecordService.insert(blockchainRecord);
     }
 
 }
